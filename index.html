@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>phòng khám nha khoa việt nhật </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="renderListPatient()">
+    <h1 class="logo"> NHA KHOA VIỆT NHẬT </h1>
+    <div class="form-student">
+        <h3>
+            Thông tin bệnh nhân 
+        </h3>
+        <label for="fullname"> Họ và Tên </label>
+        <input type="text" id="fullname" placeholder="vui lòng nhập tên">
+        <span id="fullname-error" class="error"> </span>
+        <br>
+        <label for="date"> Ngày khám </label>
+        <input type="text" id="date" placeholder="vui lòng nhập ngày khám">
+        <span id="date-error" class="error"> </span>
+        <br>
+        <label for="trieuchung"> Triệu chứng bệnh </label>
+        <input type="text" id="trieuchung" placeholder="vui lòng nhập triệu chứng bệnh">
+        <span id="trieuchung-error" class="error"> </span>
+        <br>
+        
+        <label for="email"> Email </label>
+        <input type="text" id="email"placeholder=" vui lòng nhập email">
+        <span id="email-error" class="error"> </span>
+
+        <br>
+        <label for="phone"> Số điện thoại  </label>
+        <input type="text" id="phone" placeholder="vui lòng nhập số điện thoại" >
+        <span id="phone-error" class="error"> </span>
+
+        <br>
+        <label for="address"> Quê quán </label>
+        <input type="text" id="address" placeholder=" vui lòng nhập địa chỉ quê quán">
+        <span id="address-error" class="error"> </span>
+        <br>
+        <label for="male"> Giới tính </label>
+        <input type="radio" name="gender" id="male" value="nam"> Nam
+        <input type="radio" name="gender" id="famale" value="nu"> Nữ 
+        <span id="gender-error" class="error"> </span>
+        <br>
+        <label for=""> &nbsp;</label>
+        <br>
+        <button onclick="save()" id="luulai"> Lưu lại </button>
+    </div>
+    <div class="list-student" id="list-student">
+        <h3> Danh sách bệnh nhân </h3>
+        <table id="grid-patients">
+           
+        </table>
+    </div>
+    <script src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
+    <script src="index.js"></script>
+    
+</body>
+</html>
